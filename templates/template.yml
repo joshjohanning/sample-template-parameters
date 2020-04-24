@@ -1,0 +1,18 @@
+parameters:
+    middleSteps: []
+    pool: 
+      vmImage: 'ubuntu-latest'
+    
+    
+jobs:
+
+- job: Build
+  displayName: Build
+  
+  dependsOn: ${{ parameters.dependsOn }}
+
+  pool: ${{ parameters.pool }}
+  steps: 
+
+  - script: | 
+      echo "what up world"
