@@ -7,7 +7,7 @@ parameters:
     
 jobs:
 
-- job: Build
+- job: Build${{ parameters.test }}
   displayName: Build
   
   dependsOn: ${{ parameters.dependsOn }}
