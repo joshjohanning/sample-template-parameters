@@ -1,5 +1,6 @@
 parameters:
     middleSteps: []
+    test: 'k'
     pool: 
       vmImage: 'ubuntu-latest'
     
@@ -15,4 +16,6 @@ jobs:
   steps: 
 
   - script: | 
-      echo "what up world"
+      echo "what up world ${{ parameters.test }}"
+
+  - ${{ parameters.middleSteps }}
